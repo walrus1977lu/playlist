@@ -33,10 +33,12 @@
 		$("#text").html("LONG  "+(start)[0].duration);
 		function time(){
 			$("#text").html("LONG  "+$(start)[0].duration);
+			$("#text2").html(start);
 			var t = $(start)[0].currentTime;
 			var ti = parseInt(t, 10);
 			$("#text3").html(ti);
-			
+			if ($(start)[0].duration==$(start)[0].currentTime)
+			playVid4();
 		}
 		
 		function playVid4()
@@ -100,8 +102,10 @@
 				var numic = parseInt(p2, 10);
 				setInterval(time, 1000);
 				setTimeout(addAut, 10000);
-				if ($(start)[0].ended){
-				 playVid3();
+			
+				if ($(start)[0].ended=="true"){
+				 p3=$("#text4").text("Песня закончилась");	
+				 playVid4();
 			}
 			});
 			
