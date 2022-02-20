@@ -100,7 +100,9 @@
 				var numic = parseInt(p2, 10);
 				setInterval(time, 1000);
 				setTimeout(addAut, 10000);
-				setTimeout(playVid3, numic*1000);
+				if ($(start)[0].ended){
+				 playVid3();
+			}
 			});
 			
 			
